@@ -1,0 +1,71 @@
+{
+  "name": "claude-code-wsl-launcher",
+  "displayName": "Claude Code WSL Launcher",
+  "description": "Launch Claude Code in WSL terminal with a simple click",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:claudeCodeWSL.launch"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Claude Code WSL Launcher",
+      "properties": {
+        "claudeCodeWSL.command": {
+          "type": "string",
+          "default": "claude",
+          "description": "WSLで実行するClaude Codeコマンド"
+        },
+        "claudeCodeWSL.wslDistribution": {
+          "type": "string",
+          "default": "",
+          "description": "使用するWSLディストリビューション名（空白の場合はデフォルト）"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "claudeCodeWSL.launch",
+        "title": "🤖 Launch Claude Code (WSL)",
+        "category": "Claude Code"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "claudeCodeWSL.launch"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "claudeCodeWSL.launch",
+          "when": "editorTextFocus",
+          "group": "navigation@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "claudeCodeWSL.launch",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
