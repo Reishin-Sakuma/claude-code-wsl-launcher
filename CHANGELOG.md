@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "claude-code-wsl-launcher" extension will be documented in this file.
+All notable changes to the "Claude Code WSL Launcher" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.0.1] - 2025-07-05
 
-## [Unreleased]
-
-- Initial release
+### Added
+- 初回リリース
+- WSLターミナルでClaude Codeを起動する機能
+- コマンドパレットからの起動
+- 右クリックメニューからの起動
+- 設定によるコマンドカスタマイズ機能
+- WSLディストリビューション選択機能
