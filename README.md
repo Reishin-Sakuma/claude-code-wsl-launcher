@@ -1,71 +1,59 @@
-# claude-code-wsl-launcher README
+# Claude Code WSL Launcher
 
-This is the README for your extension "claude-code-wsl-launcher". After writing up a brief description, we recommend including the following sections.
+VSCodeでワンクリックでWSLターミナルを開いてClaude Codeを起動する拡張機能です。
 
-## Features
+## 機能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 🚀 ワンクリックでWSLターミナルを開く
+- 🤖 自動的にClaudeコマンドを実行
+- ⚙️ 設定でコマンドをカスタマイズ可能
+- 📋 コマンドパレットと右クリックメニューに対応
 
-For example if there is an image subfolder under your extension project workspace:
+## 使用方法
 
-\!\[feature X\]\(images/feature-x.png\)
+### 方法1: コマンドパレット
+1. `Ctrl+Shift+P` でコマンドパレットを開く
+2. 「🤖 Launch Claude Code (WSL)」を選択
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 方法2: 右クリックメニュー
+- エディタ内で右クリック → 「🤖 Launch Claude Code (WSL)」
+- ファイルエクスプローラーで右クリック → 「🤖 Launch Claude Code (WSL)」
 
-## Requirements
+## 設定
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+設定でコマンドをカスタマイズできます：
 
-## Extension Settings
+- `claudeCodeWSL.command`: 実行するコマンド（デフォルト: `claude`）
+- `claudeCodeWSL.wslDistribution`: 使用するWSLディストリビューション（空白の場合はデフォルト）
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### 設定例
 
-For example:
+```json
+{
+    "claudeCodeWSL.command": "claude-code",
+    "claudeCodeWSL.wslDistribution": "Ubuntu-20.04"
+}
+```
 
-This extension contributes the following settings:
+## 必要な環境
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- Windows 10/11
+- WSL (Windows Subsystem for Linux)
+- Claude CodeがWSLにインストール済み
 
-## Known Issues
+## インストール方法
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1. `.vsix`ファイルをダウンロード
+2. VSCodeで `Ctrl+Shift+P` → 「Extensions: Install from VSIX...」
+3. ダウンロードした`.vsix`ファイルを選択
 
-## Release Notes
+## ライセンス
 
-Users appreciate release notes as you update your extension.
+MIT
 
-### 1.0.0
+## 更新履歴
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### 0.0.1
+- 初回リリース
+- WSLターミナルでClaude Code起動機能
+- 設定によるカスタマイズ機能
