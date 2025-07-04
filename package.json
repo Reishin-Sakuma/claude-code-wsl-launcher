@@ -68,6 +68,13 @@
           "command": "claudeCodeWSL.launch",
           "group": "navigation@1"
         }
+      ],
+      "editor/title": [
+        {
+          "command": "claudeCodeWSL.launch",
+          "when": "editorTextFocus",
+          "group": "navigation@1"
+        }
       ]
     }
   },
