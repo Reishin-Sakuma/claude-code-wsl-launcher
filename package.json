@@ -2,7 +2,7 @@
   "name": "claude-code-wsl-launcher",
   "displayName": "Claude Code WSL Launcher",
   "description": "Launch Claude Code in WSL terminal with a simple click",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "local",
   "author": {
     "name": "Your Name"
