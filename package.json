@@ -4,6 +4,19 @@
   "description": "Launch Claude Code in WSL terminal with a simple click",
   "version": "0.0.1",
   "publisher": "local",
+  "author": {
+    "name": "Your Name"
+  },
+  "keywords": [
+    "claude",
+    "wsl",
+    "terminal",
+    "ai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/claude-code-wsl-launcher"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
